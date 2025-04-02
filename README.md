@@ -1,1 +1,1 @@
-
+Sandbox project created to be the foundation of future projects. All C++ code of mine contained here is considered open-source and free to use and alter, but all assets and Blueprints have been removed.
