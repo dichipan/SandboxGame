@@ -72,3 +72,9 @@ Plugins/*/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+
+# Ignore all .uasset files
+*.uasset
+
+# Ignore the Assets folder
+Content/Assets/
