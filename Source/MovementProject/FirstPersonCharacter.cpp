@@ -75,10 +75,12 @@ void AFirstPersonCharacter::Tick(float DeltaTime)
 
 void AFirstPersonCharacter::CapVelocity()
 {
-	FVector velocity = GetVelocity();
-	float velX = FMath::Clamp(velocity.X, -speedCap, speedCap);
-	float velY = FMath::Clamp(velocity.Y, -speedCap, speedCap);
-	GetCharacterMovement()->Velocity = FVector(velX, velY, velocity.Z);
+	if (speedCap != -1.0f) {
+		FVector velocity = GetVelocity();
+		float velX = FMath::Clamp(velocity.X, -speedCap, speedCap);
+		float velY = FMath::Clamp(velocity.Y, -speedCap, speedCap);
+		GetCharacterMovement()->Velocity = FVector(velX, velY, velocity.Z);
+	}
 }
 
 // Called to bind functionality to input
@@ -299,14 +301,14 @@ void AFirstPersonCharacter::SprintEnd()
 }
 
 // Activates when sprint is pressed
-void AFirstPersonCharacter::SprintPressed()
+void AFirstPersonCharacter::SprintPressed_Implementation()
 {
 	holdingSprint = true;
 	SprintStart();
 }
 
 // Activates when sprint is released
-void AFirstPersonCharacter::SprintReleased()
+void AFirstPersonCharacter::SprintReleased_Implementation()
 {
 	holdingSprint = false;
 	//if (holdToSprint) SprintEnd();

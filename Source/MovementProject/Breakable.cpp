@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-#include "FirstPersonCharacter.h"
 #include "Breakable.h"
+#include "FirstPersonCharacter.h"
 
 // Sets default values
 ABreakable::ABreakable()

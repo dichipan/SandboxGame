@@ -141,13 +141,21 @@ protected:
 	// Sprint
 	UFUNCTION(BlueprintCallable)
 	void SprintStart();
+
+	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
 	void SprintPressed();
+	virtual void SprintPressed_Implementation();
+
 	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable)
 	void SprintShakeStart();
 
 	UFUNCTION(BlueprintCallable)
 	void SprintEnd();
+
+	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
 	void SprintReleased();
+	virtual void SprintReleased_Implementation();
+
 	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable)
 	void SprintShakeEnd();
 

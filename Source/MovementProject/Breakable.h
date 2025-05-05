@@ -37,7 +37,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Mesh", meta = (ExposeOnSpawn = true))
 	UStaticMesh* MeshAsset;
 
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	UStaticMeshComponent* BaseItem;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components")
